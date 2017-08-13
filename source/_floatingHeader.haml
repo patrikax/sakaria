@@ -1,0 +1,12 @@
+#scrollmenu.absoluteTop.top-bar-container(data-sticky-container)
+  .sticky(data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;")
+    .row
+      .small-12.columns
+        .top-bar.large-text
+          .row-column
+            .top-bar-left
+              #title.menu-text 
+                = link_to "Sakaria Studio", "/"
+            .top-bar-right
+              #about.menu-text
+                = link_to "About", "/about.html"

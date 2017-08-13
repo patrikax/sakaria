@@ -1,0 +1,11 @@
+//- if current_page.data.title =! 'Sakaria Studio'
+.row
+  .small-12.columns
+    .top-bar.large-text
+      .row-column
+        .top-bar-left
+          #title.menu-text{ current_page.data.title == 'Sakaria Studio' ? {class: 'invisible'} : {}}
+            = link_to "Sakaria Studio", "/"
+        .top-bar-right
+          #about.menu-text
+            = link_to "About", "/about.html"

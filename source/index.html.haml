@@ -1,0 +1,14 @@
+---
+title: Sakaria Studio
+---
+#masthead.row.text-center
+  %h1 Sakaria
+
+= partial :contact
+
+.works
+  - blog.articles.each do |article|
+    .row.expanded.work-link
+      = link_to (image_tag (article.data.coverimage)), article.url
+
+= javascript_include_tag  "floatingHeaderStart"
