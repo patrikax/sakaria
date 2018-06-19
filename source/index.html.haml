@@ -1,0 +1,21 @@
+---
+title: Sakaria Studio
+---
+#masthead.row.expanded
+  .title-box
+    .site-logo
+    =image_tag 'logo_sakariastudio_new.png'
+  //  =image_tag 'logo_sakariastudio.svg'
+  
+  //%video{:loop => true, :playsinline => true, :autoplay => true, :poster => 'images/minnadansar.jpg',  :class => 'fs-vid'}
+  //  %source{:src => 'images/minnadansar-trimmed.mp4', :type => 'video/mp4'}
+
+.works.white-bg
+  - blog.articles.each do |article|
+    %a{:href => article.url}
+      .row.expanded.work-link{:style => "background-image: url(#{article.data.coverimage});"}
+        .row
+          .small-12.columns
+            %span.large-text.title-box=article.title
+      
+= javascript_include_tag  "floatingHeaderStart"

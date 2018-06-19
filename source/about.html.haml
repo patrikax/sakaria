@@ -1,0 +1,92 @@
+---
+title: About
+---
+
+.row.large-text.padding.padding-top
+  .small-12.columns
+    %about
+      A design and art direction agency founded by graphic designer (MA Royal College of Art) Minna Sakaria. We offer all types of graphic design services, working together with interdisciplinary design collective My Little Jobby.
+
+
+
+.row
+  .small-12.columns
+    %h2.large-text Clients:
+.row.expanded.pink-bg
+  .row.logos
+    - data.logos.images.each_slice(3) do |slice|
+      .row
+        - slice.each do |image|
+          .small-4.columns
+            .frame
+              %span.helper
+              =image_tag image.file, :class => 'logo'
+  .row
+    .small-12.columns.padding.medium-text
+      Adrian Shaugnessy | Anna Linder | Bastion Studio Agency Lab | Emily Roysdon | Erik Krikortz | Typonjachi International Typography Biennale | Maja Gunn | Ji Nilsson | Ester Martin Bergsmark | Hi on Life
+
+
+
+.row.expanded.padding
+
+.row
+  .small-12.columns
+    %h2.large-text.padding Types of work:
+.row
+  .large-6.columns
+    %h3.large-text Visual identity
+    %p.padding We create design packages including logotype, colour palette, typeface etc, and the applications needed for the purpose.
+  .large-6.columns
+    %h3.large-text Type design
+    %p.padding We custom design typefaces, taking them all the way from sketches to working in the text editor.
+.row
+  .large-6.columns
+    %h3.large-text Workshops
+    %p.padding We occasionally lecture in design and typography at art universities and other places.
+  .large-6.columns
+    %h3.large-text Art &amp; research 
+    %p.padding We do independent art work and reserach projects along with our commercial practice.
+.row
+  .large-6.columns
+    %h3.large-text Art direction
+    %p.padding Choosing visual langugage/imagery, styling and over seeing production to make sure the concept is maintained throughout all units.
+  .large-6.columns
+    %h3.large-text Exhibition design
+    %p.padding Spatial large scale graphics, display solutions for public spaces, wayfinding and signage.
+.row
+  .large-6.columns
+    %h3.large-text Editorial design
+    %p.padding Book cover art, book design, magazine design. Contact with printers and book binders.
+
+.pink-bg.links
+  .row.padding.padding-top
+    .small-12.columns
+      %h2.large-text Sakaria @ the Internet:
+  
+
+  .row
+    .small-12.columns
+      - data.features.articles.each_slice(2) do |slice|
+        .row.padding-top
+          - slice.each do |feature|
+            .large-6.columns
+              %a{:href => feature.url}
+                %p
+                  =feature.source
+                  %br
+                  =feature.title
+
+
+
+  .row.padding.padding-top
+    .small-12.columns
+      %h2.large-text Publications:
+    .small-12.columns
+      %p
+        Exhibition Art, Graphics and Space Design, Sandu Publishing, 2016
+        %br
+        Optical Illusions, Sandu Publishing, 2016
+        %br
+        Étapes 234: Écoles & diplômes, 2016
+        %br
+        Cap&design, no5 2015

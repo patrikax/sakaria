@@ -1,0 +1,22 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "n95JHS9RkRBn-xRv0H-Zd7yFNfd3Ellrl9QC8u3V2ac", :name => "google-site-verification"}
+    %title= current_resource.data.title
+    = favicon_tag 'images/favicon.png'
+    = stylesheet_link_tag "style"
+    = javascript_include_tag "modernizr"
+  %body{:class => page_classes}
+    - if current_resource.data.title == 'Sakaria Studio'
+      = partial :floatingHeaderStart
+    - if current_resource.data.title != 'Sakaria Studio'
+      = partial :header
+    = yield
+    = partial :contact
+    - if current_resource.data.title == 'About'
+      = partial :disclaimer
+    = javascript_include_tag  "all"
