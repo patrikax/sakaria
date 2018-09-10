@@ -1,0 +1,8 @@
+# Mac Default
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Middleman
+.sass-cache/
+build/*
